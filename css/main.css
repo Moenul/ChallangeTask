@@ -1,0 +1,528 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+:root{
+	--color-bg:#364968;
+	--color-bg-deep:#1e3151;
+	--color-hover:#e09664;
+	--color-hover-next:#6c4343;
+	--color-deep:black;
+	--color-white:white;
+	--color-smoke:#e6e6e6;
+	--color-notify:#d61a0b;
+	--color-black:black;
+	--color-pest:#00C0EF;
+	--color-green:#00A75B;
+	--color-orange:#F49C11;
+	--color-blue:#3C8EBC;
+}
+
+body{
+	background:var(--color-bg);
+	min-width: 1024px;
+}
+a{
+	text-decoration: none !important;
+}
+
+
+/* ---------- Side Nav Section Start ------------ */
+
+
+.side_nav{
+	width: 200px;
+    min-height: 120vh;
+    position: fixed;
+    background: var(--color-bg);
+    display: inline-block;
+    top: 0;
+    transition: all .3s ease-in-out;
+    z-index: 1000;
+	box-shadow: 1px 1px 15px -3px #3463af;
+}
+.side_nav .ProfileSection{
+	width: 100%;
+	height: 120px;
+	background: var(--color-bg-deep);
+	overflow: hidden;
+	border-bottom: 3px solid var(--color-hover);
+	/* position: relative; */
+}
+.side_nav .ProfileSection .brand{
+	width: 100%;
+	height:50px;
+	background: var(--color-bg-deep);
+	overflow: hidden;
+}
+.side_nav .ProfileSection .brand .big_image{
+	width: 100%;
+	display: block;
+}
+.side_nav .ProfileSection .brand .small_image{
+	width: 100%;
+	display: none;
+}
+.side_nav .ProfileSection .profileImg{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 10px 10px;
+	display: inline-block;
+	
+}
+.side_nav .ProfileSection .profileImg img{
+	width: 100%;
+	cursor: pointer;
+}
+.side_nav .ProfileSection .profileDesc{
+	width: calc(100% - 70px);
+	height: 70px;
+	float: right;
+}
+.side_nav .ProfileSection .profileDesc .name{
+	margin-top: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-white);
+}
+.side_nav .ProfileSection .profileDesc .title{
+	font-size: 13px;
+    margin: 4px 4px;
+    color: var(--color-hover);
+}
+
+
+
+
+.side_nav .side_nav_item{
+	width:200px;
+	height: auto;
+	padding: 10px 0px;
+	position: relative;
+	color: var(--color-white);
+	list-style: none;
+}
+.side_nav  .side_nav_item:hover{
+	cursor: pointer;
+	color: var(--color-hover);
+}
+.side_nav .side_nav_item i{
+	width:43px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.side_nav .side_dropdown_nav{
+	display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 6px;
+    top: 10px;
+}
+.side_nav .side_dropdown_nav i{
+	width: 20px;
+	text-align: center;
+	font-size: 16px;
+	transition: all .3s ease-in-out;
+}
+
+.side_nav .side_dropdown_nav_active i{
+	transform: rotate(90deg);
+}
+
+
+.side_nav .side_dropdown{
+	display: block;
+	width: 168px;
+	background: var(--color-hover);
+	margin: 10px 5px 0px 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 5px;
+    display: none;
+}
+.side_nav .side_dropdown a{
+	display: block;
+    padding: 4px 10px;
+    color: white;
+}
+.side_nav .side_dropdown a:hover{
+	background: var(--color-hover-next);
+    border-radius: 3px;
+}
+
+
+
+
+
+.side_nav_collaps{
+	width:43px;
+	transition: all .3s ease-in-out;
+}
+.side_nav_collaps span{
+	display: none;
+}
+
+.side_nav_collaps .ProfileSection .brand .big_image{
+	display: none;
+}
+.side_nav_collaps .ProfileSection .brand .small_image{
+	display: block;
+    margin-top: 2px;
+    padding: 3px;
+}
+.side_nav_collaps .ProfileSection .profileImg{
+	width: 35px;
+    height: 35px;
+    margin: 4px;
+    margin-top: 15px;
+}
+.side_nav_collaps .ProfileSection .profileDesc{
+	display: none;
+}
+.side_nav_collaps .ProfileSection .profileDescActive{
+	position: absolute;
+    width: 160px;
+    background: var(--color-bg);
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 5px 10px;
+    left: 47px;
+    top: 55px;
+    display: block;
+}
+
+
+.side_nav_collaps .side_nav_item{
+	width: 43px;
+	height: 43px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.side_nav_collaps .side_dropdown_nav {
+	right: -5px;
+    top: 8px;
+}
+.side_nav_collaps .side_dropdown_nav i{
+    font-size:14px;
+}
+.side_nav_collaps .side_dropdown_nav_active i{
+	transform: rotate(-90deg);
+}
+
+
+.side_nav_collaps .side_dropdown{
+	  left: 32px;
+    position: absolute;
+    top: 0px;
+}
+
+/* ---------- Side Nav Section Start ------------ */
+
+
+
+.content_section{
+	width:calc(100% - 200px);
+	float: right;
+	margin-top: -12px;
+	background:#f5f5f5;
+	min-height:120vh;
+	transition: all .3s ease-in-out;
+}
+.side_nav_collaps_content{
+	width:calc(100% - 45px);
+	transition: all .3s ease-in-out;
+}
+
+/* ---------- Navigation Section Start ------------ */
+
+.navigation{
+	width: 100%;
+	background:var(--color-white);
+	position: sticky;
+	z-index: 50;
+	top: 0px;
+	padding: 8px 6px;
+	color:var(--color-bg);
+	box-shadow: 0px 0px 7px #cecece;
+}
+.dropdown_btn{
+	width:35px;
+	height:35px;
+	border-radius:3px;
+	display: inline-block;
+	cursor: pointer;
+	font-size:22px;
+	text-align: center;
+}
+.dropdown_btn_active{
+	background: var(--color-smoke);
+}
+
+
+
+.navigation .nav_bar{
+	display: inline-block;
+	list-style: none;
+	float: right;
+}
+.navigation .nav_bar .nav_item{
+	margin: 0px 10px;
+	cursor: pointer;
+	position: relative;
+	float: left;
+}
+.navigation .nav_bar .nav_item i{
+	padding: 10px 8px;
+}
+.navigation .nav_bar .nav_item:hover{
+	color:var(--color-hover);
+}
+
+
+.navigation .nav_bar .nav_item span{
+	font-size: 10px;
+	position: absolute;
+	padding: 2px;
+	top:5px;
+	border-radius: 20%;
+	font-weight: bold;
+    font-family: sans-serif;
+	color: var(--color-notify);
+}
+.navigation .nav_bar .nav_item:hover span{
+	color:var(--color-hover);
+}
+.navigation .nav_bar .nav_item .dropdown{
+	position: absolute;
+	min-width: 260px;
+	border-radius: 3px;
+    background: wheat;
+    top: 44px;
+    right: 0px;
+    display: none; 
+    z-index: 5;
+    overflow: hidden;
+    box-shadow: 0px 0px 9px silver;
+}
+.navigation .nav_bar .nav_item .dropdown .dropdown_title{
+	  padding: 6px 14px;
+    background: var(--color-hover);
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+.navigation .nav_bar .nav_item .dropdown a{
+	  text-decoration: none !important;
+    display: block;
+    color: black;
+    background: white;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 14px;
+}
+
+.navigation .nav_bar .nav_item .dropdown a .logo_bar {
+    width: 65px;
+    height: 65px;
+    display: inline-block;
+    text-align: center;
+    padding: 8px;
+}
+.navigation .nav_bar .nav_item .dropdown a .logo_bar img {
+    width: 100%;
+    border-radius: 50%;
+}
+.navigation .nav_bar .nav_item .dropdown a .detail_bar {
+    width: calc(100% - 65px);
+    float: right;
+    height: 65px;
+    padding: 3px;
+}
+.navigation .nav_bar .nav_item .dropdown a .detail_bar .date {
+    font-size: 12px;
+    font-weight: bold;
+    color: #8b8b8b;
+}
+.navigation .nav_bar .nav_item .dropdown a .detail_bar .desc {
+    font-size: 13px;
+    margin-top: 4px;
+    color: #4d4d4d;
+    font-weight: 600;
+}
+
+.navigation .nav_bar .nav_item .dropdown a:hover{
+	background: whitesmoke;
+}
+
+
+.navigation .nav_bar .message .dropdown a .detail_bar .desc{
+    height: 20px;
+    overflow: hidden;
+}
+.navigation .nav_bar .message .dropdown a .detail_bar .info{
+    width: 100%;
+    margin-top: 5px;
+    font-size: 13px;
+    color: #979797;
+}
+.navigation .nav_bar .message .dropdown a .detail_bar .info .name{
+    display: inline-block;
+    width: 65%;
+}
+.navigation .nav_bar .message .dropdown a .detail_bar .info .time{
+    float: right;
+    margin-right: 20px;
+}
+
+.navigation .nav_bar .profile i img{
+    scale: 1.8;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.navigation .nav_bar .profile .dropdown{
+    min-width: 160px;
+}
+.navigation .nav_bar .profile .dropdown a{
+    padding: 6px 10px;
+    font-size: 16px;
+}
+
+/* ---------- Navigation Section End ------------ */
+
+
+
+.header{
+	width: 100%;
+    margin-top: 25px;
+    padding: 10px;
+}
+.header h3{
+	display: inline-block;
+}
+
+.panel_section{
+	margin-bottom: 30px;
+}
+.panel_section .panel {
+    width: 100%;
+    height: 100px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px -4px #bdbdbd;
+	transition: all .3s ease-in-out;
+}
+.panel_section .panel .details_section{
+	width: calc(100% - 60px);
+    display: inline-block;
+    padding: 10px;
+}
+.panel_section .panel .details_section .name{
+	font-size: 16px;
+    font-weight: 500;
+    color: #5c5c5c;
+}
+.panel_section .panel .details_section .counts{
+	font-size: 20px;
+    font-weight: 500;
+    color: black;
+	margin-left: 10px;
+}
+.panel_section .panel .details_section .desc{
+	font-size: 14px;
+    color: rgb(113, 113, 113);
+}
+.panel_section .panel .icon_section{
+	width: 50px;
+    height: 50px;
+    float: right;
+    border-radius: 50%;
+    font-size: 25px;
+    padding: 5px 0px;
+    text-align: center;
+    margin: 10px 10px 0px 0px;
+    color: white;
+	outline: 3px solid white;
+	transition: all .3s ease-in-out;
+}
+
+.panel_section .panel:hover{
+	cursor: pointer;
+    background: white;
+    box-shadow: 0px 0px 14px -1px #bdbdbd;
+}
+.panel_section .panel:hover .icon_section{
+	outline:3px solid var(--color-smoke);
+}
+
+
+/* Dashboar Section End */
+
+/* Area Section Start */
+
+.form_section{
+	width: 100%;
+	min-height: 200px;
+	border: 1px solid #cdcdcd;
+	border-radius: 5px;
+	background: white;
+}
+
+.form_section .form_head{
+	width: 100%;
+	height: 60px;
+	border-bottom: 1px solid #cdcdcd;
+	padding: 12px;
+	font-size: 22px;
+}
+.form_section .form_container{
+	width: 100%;
+	border-bottom: 1px solid #cdcdcd;
+	padding: 12px;
+}
+
+
+
+/* Flash  */
+
+
+/* /////  Alert Box Start ------------------- */
+#flash_messsage {
+    width: 500px;
+    height: 40px;
+    padding: 5px 20px;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translate(-28%, -50%);
+    z-index: 999999;
+	overflow: hidden;
+	display: none;
+}
+#flash_messsage::before{
+	content: '';
+	width: 100%;
+	height: 3px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #00A75B;
+	animation: slideing 3.5s infinite;
+}
+#flash_messsage strong{
+    font-size: 14px;
+}
+
+@keyframes slideing {
+	from {left: 0px;}
+	to {left: -100%;}
+}
+/* /////  Alert Box End ------------------- */

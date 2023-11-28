@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<title>ChallengeTask</title>
+</head>
+<body>
+
+    <div class="alert alert-success alert-block" id="flash_messsage">
+		<button type="button" class="close" data-dismiss="alert">×</button>
+		<strong class="text-dark">Your form has been submitted</strong>
+	</div>
+
+
+<div class="side_nav">
+	<div class="ProfileSection">
+		<div class="brand">
+			<img class="big_image" src="\FrontEnd\ChallengeTask\images\CoverLogo.png" alt="">
+			<img class="small_image" src="\FrontEnd\ChallengeTask\images\Logo.png" alt="">
+		</div>
+		<div class="profileImg"><img src="\FrontEnd\ChallengeTask\images\DummyProfile.jpg" alt=""></div>
+		<div class="profileDesc">
+			<div class="name">Moenul Islam</div>
+			<div class="title">Web Designer</div>
+		</div>
+
+	</div>
+	
+	<a href="index.html"><li class="side_nav_item"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></li></a>
+	
+	<li class="side_nav_item"><i class="fas fa-cog"></i><span>Settings</span>
+		<div class="side_dropdown_nav"><i class="fas fa-angle-down"></i></div>
+		<div class="side_dropdown">
+			<a href="areas.html">Areas</a>
+			<a href="">Shops</a>
+		</div>
+	</li>
+	<a href=""><li class="side_nav_item"><i class="fas fa-puzzle-piece"></i><span>Widget</span></li></a>
+
+</div>
+
+
+
+
+
+
+<div class="content_section">
+
+	<nav class="navigation">
+		<div class="dropdown_btn"><i class="fas fa-bars"></i></div>
+	
+		<div class="nav_bar">
+			<li class="nav_item notification"><i class="far fa-bell"><span>4</span></i>
+				<div class="dropdown">
+					<div class="dropdown_title">Notification</div>
+					<a href="">
+						<div class="logo_bar"><img src="\FrontEnd\ChallengeTask\images\DummyProfile.jpg"></div>
+						<div class="detail_bar">
+							<div class="date">15 Dec 2023</div>
+							<div class="desc">Notification description will show here...</div>
+						</div>
+					</a>
+				</div>			
+			</li>
+	
+	
+			<li class="nav_item message"><i class="far fa-envelope"><span>12</span></i>
+				<div class="dropdown">
+					<div class="dropdown_title">Message</div>
+					<a href="">
+						<div class="logo_bar"><img src="\FrontEnd\ChallengeTask\images\DummyProfile.jpg"></div>
+						<div class="detail_bar">
+							<div class="desc">Message content will show here</div>
+							<div class="info">
+								<div class="name">Moenul Islam</div>
+								<div class="time">2h ago</div>
+							</div>
+						</div>
+					</a>
+				</div>			
+			</li>
+	
+			<li class="nav_item profile"><i class="far fa-profile"> <img src="\FrontEnd\ChallengeTask\images\DummyProfile.jpg"></i>
+				<div class="dropdown">
+					<div class="dropdown_title">Profile</div>
+					<a href="">Profile</a>
+					<a href="">Log Out</a>
+				</div>			
+			</li>
+	
+		</div>
+	
+		
+	</nav>
+
+
+	<!-- start header -->
+	<div class="header">
+		<h3>Areas</h3>&nbsp;&nbsp;<span> Manage Area</span>
+		<hr>
+	</div>
+	<!-- end header -->
+
+	<!-- start dashboard content -->
+	<div class="container">
+        <div class="form_section">
+            <div class="form_head">
+                <div class="title_form">
+                    Add Your Area
+                </div>
+            </div>
+            <div class="form_container">
+                <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Select Area</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                          <option>Dhaka</option>
+                          <option>Chittagong</option>
+                          <option>Sylhet</option>
+                          <option>Baridhal</option>
+                          <option>Khulna</option>
+                        </select>
+                      </div>
+
+                    <button type="submit" class="btn btn-primary test_alert">Submit</button>
+                  </form>
+            </div>
+        </div>
+		
+		
+	</div>
+		
+		
+	<!-- end dashboard content -->
+</div>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
